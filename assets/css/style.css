@@ -1,0 +1,284 @@
+body{
+    width: 100%;
+    margin: 0% auto;
+}
+
+@font-face {
+    font-family: "Bagnard";
+    src: url(../font/Bagnard.otf); 
+  }
+
+ @font-face {
+    font-family: "SuisseIntlMono-Regular-WebS";
+    src: url(../font/SuisseIntlMono-Regular-WebS.woff); 
+  }
+
+/* main */
+main{
+    width:100vw;
+    height: 90vh;
+    margin: 0 auto;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+}
+
+.main-container{
+    width: 80vw;
+}
+
+h1{
+    font-family: 'Bagnard';
+    font-size: 46pt;
+    font-weight: normal;
+    line-height: 54pt;
+}
+
+main a{
+    background-color: white;
+}
+
+li{
+    list-style: none;
+}
+
+li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* project info */
+.project-info section{
+    position: fixed;
+    width: 30%;
+    height: 400px;
+    /* border: 1px solid #000; */
+    background-color: white;
+}
+.project-info p{
+    padding: 0em 1.5em;
+}
+
+.ngv-info{
+    top: 5%;
+    right: 5%;
+    display: none;
+    border: 1px solid #000;
+}
+
+.hyphen-info{
+    top: 10%;
+    right: 10%;
+    display: none;
+    border: 1px solid #000;
+}
+
+.este-info{
+    top: 15%;
+    right: 15%;
+    display: none;
+    border: 1px solid #000;
+}
+
+.am-info{
+    top: 20%;
+    right: 20%;
+    display: none;
+    border: 1px solid #000;
+}
+
+hr{
+    color: #000;
+}
+
+#close{
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    cursor: pointer;
+}
+
+#close:hover{
+    text-decoration: underline;
+}
+
+
+/* footer */
+.footer-list{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    padding: 0;
+    margin: 0 0 0 0;
+    bottom: 0%;
+    background-color: white;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    list-style: none;
+    overflow: hidden;
+    transition: .4s;
+    /* box-sizing: border-box; */
+}
+
+footer li{
+    white-space: nowrap;
+    display: inline-block;
+    text-align: centre;
+    margin: 0;
+    font-size: 14pt;
+}
+
+footer li:hover{
+    text-decoration: underline;
+}
+
+.info{
+    width: 330px;
+    position: fixed;
+    bottom: 62px;
+    float: left;
+    border: 1px solid #000;
+    border-left: none;
+    border-bottom: none;
+    padding: 1em;
+    display: none;
+}
+
+.info.showme{
+    display: block;
+}
+
+.info a,
+p{
+    color: black;
+    font-family: 'SuisseIntlMono-Regular-WebS';
+    text-decoration: none;
+}
+
+.info a:hover{
+    text-decoration: underline;
+}
+
+.info a:visited{
+    color: black;
+}
+
+#contact{
+    padding: 0em 1em;
+    border-right: 1px solid #000;
+    background-color: white;
+	z-index: 99;
+	cursor: pointer;
+}
+
+#contact.showme{
+    text-decoration: underline;
+}
+
+#about{
+    width: 73%;
+    z-index: -2;
+    /* Starting position */  
+    -moz-transform:translateX(50%);
+    -webkit-transform:translateX(50%);    
+    transform:translateX(100%);
+    /* Apply animation to this element */  
+    -moz-animation: example1 25s linear infinite;
+    -webkit-animation: example1 25s linear infinite;
+    animation: example1 25s linear infinite;
+}
+
+/* Define transform animation */
+@-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); 
+            transform: translate(100%)}
+    100% { -moz-transform: translateX(-100%); 
+            transform: translate(100%)}
+}
+@-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); 
+            transform: translate(100%)}
+    100% { -webkit-transform: translateX(-100%); 
+            transform: translate(100%)}
+}
+@keyframes example1 {
+    0%   { -moz-transform: translateX(100%); /* Firefox bug fix */
+            -webkit-transform: translateX(100%); /* Firefox bug fix */
+            transform: translateX(100%);       
+    }
+    100% { -moz-transform: translateX(-100%); /* Firefox bug fix */
+            -webkit-transform: translateX(-100%); /* Firefox bug fix */
+            transform: translateX(-100%); 
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1500px)
+{
+    .project-info section{
+        width: 50%;
+        z-index: -1;
+    }
+    main{
+    justify-content: flex-start;
+    align-items: flex-end;
+    }
+
+}
+@media only screen and (max-width: 768px)
+{
+    h1{
+        font-size: 36pt;
+        line-height: 44pt;
+    }
+    .project-info section{
+        width: 50%;
+        z-index: -1;
+    }
+    main{
+    justify-content: flex-start;
+    align-items: flex-end;
+    }
+
+}
+@media only screen and (max-width: 500px)
+{
+    .project-info section{
+        width: 70%;
+    }
+    h1{
+        font-size: 30pt;
+        line-height: 38pt;
+    }
+}
+
+
+
+.swiper-container{
+    margin-left: -1px !important;
+    background-color: var(--amWhite);
+    width: 99%;
+    /* height: 200px; */
+    border: 1px solid #000;
+    }
+    .swiper-slide{
+    display: flex;
+    background-color: var(--amBlack);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    }
+    .swiper-slide .bottom{
+        background-position: bottom !important;
+    }
